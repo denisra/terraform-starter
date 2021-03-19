@@ -12,9 +12,9 @@ deny[sprintf("We require that passwords have at least 16 characters (%s)", [reso
     resource.change.after.length < 16
 }
 
-warn[sprintf("We advise that passwords have at least 20 characters (%s)", [resource.address])] {
+warn[sprintf("We advise that passwords have at least 24 characters (%s)", [resource.address])] {
     resource := new_password[_]
-    resource.change.after.length < 20
+    resource.change.after.length < 24
 }
 
 new_password[resource] {
